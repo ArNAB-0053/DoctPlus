@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+    opacity: 1;
+    overflow-x: hidden;
+}
+
+footer {
+    margin-top: 6rem;
+    bottom: 0;
+}
+
+.footer-container p {
+    font-size: 1.8rem;
+    color: #686868;
+}
+
+.footer-container {
+    position: absolute;
+    left: 0;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f0f0f0;
+    padding: 2rem 0 0 0;
+    flex-direction: column;
+    height: 30%;
+}
+
+.footer-content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.footer-content p {
+    margin-top: -1.5rem;
+}
+
+.logo-img-for-footer {
+    display: flex;
+    width: 12rem;
+    height: 4rem;
+    padding: 2rem;
+    margin: 0;
+}
+
+.footer-social-media {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-social-media a {
+    color: #686868;
+}
+
+.div-for-lines {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.h-line {
+    display: flex;
+    border: 0.1rem solid #686868;
+    width: 20vh;
+    margin-right: 0.3rem;
+    margin-top: -0.2rem;
+}
+
+.horizontal-line {
+    margin-right: 0.3rem;
+}
+
+.mobile-email-info-in-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 3rem;
+}
+
+.mobile-email-info-in-footer h6 {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin: 0 2rem;
+    font-size: 1.7rem;
+}
+
+.mobile-email-info-in-footer h6 svg {
+    height: 2rem;
+    width: 2rem;
+}
+
+.mobile-email-info-in-footer h6 p {
+    font-size: 2.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.v-line {
+    display: flex;
+    border: 0.1rem solid #686868;
+    height: 5vh;
+    margin-right: 0.3rem;
+    margin-top: -0.2rem;
+}
+
+.mobile-email-info-in-footer h6 a {
+    margin-top: -1rem;
+    color: #686868;
+}
+
+@media screen and (max-width: 768px) {
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    html {
+        font-size: 45%;
+        opacity: 1;
+    }
+
+    .h-line {
+        display: none;
+        border: none;
+        width: 0;
+        margin-right: 0;
+        margin-top: 0;
+    }
+
+    .horizontal-line {
+        margin-right: 0;
+    }
+}
+
+@media screen and (max-width: 280px) {
+    html {
+        font-size: 35%;
+    }
+}

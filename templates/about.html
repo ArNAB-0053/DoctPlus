@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../static/Image/WebLogo.ico" type="image/x-icon">
+    <title>About</title>
+    <link rel="stylesheet" href="../static/css/header.css">
+    <link rel="stylesheet" href="../static/css/about.css">
+    <link rel="stylesheet" href="../static/css/footer.css">
+    <script src="../static/js/drawer.js"></script>
+    <script src="../static/js/script.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    <script src="../static/js/signUpIn.js"></script>
+</head>
+
+<body>
+    {% include 'header.html' %}
+    <main>
+        <section id="about">
+            <div class="aboutContainer">
+                <div class="aboutDes">
+                    <h1 class="aboutHeading">About Us</h1>
+                    <div class="aboutUsUnderLine"></div>
+                    <div class="aboutContent">
+                        <p class="p1">" We are third-year students from Brainware University, and this project represents
+                            our personal innovation. It is a result of our collective efforts and creative thinking. "</p>
+                    </div>
+                </div>
+                <div class="descriptionContainer">
+                    <div class="about-us-section">
+                        <div class="team-member" id="arnab">
+                            <img class="img-link" src="../static/Image/profileImg.png" alt="Team Member 1">
+                            <h3>Arnab Bhattacharyya</h3>
+                            <p class="role">Role: Website Development</p>
+                            <p class="details">Arnab is responsible for creating and maintaining the project's website,
+                                ensuring a
+                                user-friendly experience for our visitors.</p>
+                            {% include 'mediaLinksArnab.html' %}
+                        </div>
+
+                        <div class="team-member" id="rahul">
+                            <img class="img-link" src="../static/Image/profileImg.png" alt="Team Member 2">
+                            <h3>Rahul Sharma</h3>
+                            <p class="role">Role: Machine Learning</p>
+                            <p class="details">Rahul is a key contributor to the project's machine learning model
+                                building and data
+                                analysis, providing valuable insights for prediction.</p>
+                            {% include 'mediaLinksRahul.html' %}
+                        </div>
+
+                        <div class="team-member" id="dwaipayan">
+                            <img class="img-link" src="../static/Image/profileImg.png" alt="Team Member 3">
+                            <h3>Dwaipayan Biswas</h3>
+                            <p class="role">Role: Android App Development</p>
+                            <p class="details">Dwaipayan played a crucial role in developing the Android app, ensuring
+                                seamless
+                                functionality and user interactions.</p>
+                            {% include 'mediaLinksDwaipayan.html' %}
+                        </div>
+
+                        <div class="team-member" id="shahid">
+                            <img class="img-link" src="../static/Image/profileImg.png" alt="Team Member 4">
+                            <h3>Shahid Aktar Mandal</h3>
+                            <p class="role">Role: Android App Development</p>
+                            <p class="details">Shahid contributed to the Android app development, implementing various
+                                features and
+                                optimizing performance.</p>
+                            {% include 'mediaLinksShahid.html' %}
+                        </div>
+
+                        <div class="team-member" id="sriparna">
+                            <img class="img-link" src="../static/Image/profileImg.png" alt="Team Member 5">
+                            <h3>Sriparna Mondal</h3>
+                            <p class="role">Role: UI/UX Design</p>
+                            <p class="details">Sriparna's expertise in UI/UX design has helped create an aesthetically
+                                pleasing and
+                                user-friendly interface for our project.</p>
+                            {% include 'mediaLinksSriparna.html' %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    {% include 'footer.html' %}
+</body>
+
+</html>

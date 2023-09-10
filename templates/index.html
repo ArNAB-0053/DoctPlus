@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="../static/Image/WebLogo.ico" type="image/x-icon">
+  <title>Diabetes Predicter</title>
+  <link rel="stylesheet" href="../static/css/header.css">
+  <link rel="stylesheet" href="../static/css/index.css">
+  <link rel="stylesheet" href="../static/css/footer.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+  <script src="../static/js/drawer.js"></script>
+  <script src="../static/js/script.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+  <script src="../static/js/signUpIn.js"></script>
+  <script src="../static/js/diseaseSidebar.js"></script>
+</head>
+
+<body>
+  {% include 'header.html' %}
+  <main>
+    <div class="div-head-1">
+      <div class="div-head-2">
+        <h2 class="headline-2">Welcome to Disease Predictor!</h2>
+
+        <pre><div class="animation-container">Predict <div class="animation-text"></div></div></pre>
+        <script src="../static/js/scriptForIndexAnimation.js"></script>
+        <div class="paragraph">
+          <p>At Disease Predictor, we are committed to assisting you in taking control of your health by predicting
+            three prevalent diseases: heart disease, Parkinson's disease, and diabetes. Our predictive models and
+            innovative algorithms analyze key medical indicators to provide accurate predictions.</p>
+        </div>
+      </div>
+      <img class="pro-image" src="static/Image/disease.jpg" alt="">
+    </div>
+
+    <h1>DISEASE PREDICTOR</h1>
+
+    <div class="container-main">
+      <div class="container" id="heart">
+        <div class="container-content">
+          <div class="image">
+            <img class="d-img" src="static/Image/heart-img.jpg" alt="">
+          </div>
+          <h3>Heart Disease Predictor</h3>
+          <p>Take control of your cardiovascular health with our Heart Disease Predictor. This free online tool
+            harnesses the power of machine learning to assess your risk of heart disease based on key medical
+            indicators. </p>
+        </div>
+        <a href="/heart_form">Start Prediction</a>
+      </div>
+
+      <div class="container" id="parkinson">
+        <div class="container-content">
+          <div class="image">
+            <img class="d-img" src="static/Image/parkinsons-img.jpg" alt="Parkinson">
+          </div>
+          <h3>Parkinson's Disease Predictor</h3>
+          <p>Discover early signs of Parkinson's disease with our innovative Parkinson's Disease Predictor. This
+            user-friendly tool analyzes relevant data using advanced algorithms to evaluate the likelihood of
+            Parkinson's disease. </p>
+        </div>
+        <a href="/parkinsons_form">Start Prediction</a>
+      </div>
+
+      <div class="container" id="diabetes">
+        <div class="container-content">
+          <div class="image">
+            <img class="d-img" src="static/Image/diabetes-img.jpg" alt="Diabetes">
+          </div>
+          <h3>Diabetes Predictor</h3>
+          <p>Take charge of your health and gain insights into your risk of diabetes with our Diabetes Predictor. Using
+            advanced analytics, this powerful tool assesses various factors to estimate the probability of diabetes.</p>
+        </div>
+        <a href="/diabetes_form">Start Prediction</a>
+      </div>
+    </div>
+
+    <div class="disease-container">
+      <a class="disease" href="/disease">
+        <h6>Go to Disease Predictor</h6>
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right"
+          viewBox="0 0 16 16">
+          <path fill-rule="evenodd"
+            d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+        </svg>
+      </a>
+    </div>
+  </main>
+
+  {% include 'footer.html' %}
+
+</body>
+
+</html>

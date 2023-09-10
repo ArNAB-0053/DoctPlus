@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../static/Image/WebLogo.ico" type="image/x-icon">
+    <title>Heart Disease Predictor</title>
+    <link rel="stylesheet" href="../static/css/header.css">
+    <link rel="stylesheet" href="../static/css/disease.css">
+    <link rel="stylesheet" href="../static/css/footer.css">
+    <script src="../static/js/drawer.js"></script>
+    <script src="../static/js/script.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    <script src="../static/js/signUpIn.js"></script>
+    <script src="../static/js/diseaseSidebar.js"></script>
+    <style>
+        .dc-links-h {
+            border: 3px solid #5a0c9e;
+        }
+
+        .dc-links-h a {
+            font-size: 18px;
+            font-weight: 800;
+        }
+    </style>
+</head>
+
+<body>
+    {% include 'header.html' %}
+    <div class="container-sidebar-form">
+        {% include 'disease_sidebar.html' %}
+        <div class="container-form">
+            <a href="/disease">
+                <svg class="go-back" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-arrow-left" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z" />
+                </svg>
+            </a>
+            <h1>Heart Disease Predictor</h1>
+            <div class="UnderlineDH"></div>
+            <form action="/heart" method="post">
+                <div class="inputs-container">
+                    <div class="inputs">
+                        <label for="feature1"></label>
+                        <input type="text" id="feature1" name="feature1" placeholder="Age (years)" required>
+                    </div>
+
+                    <div class="inputs">
+                        <label for="feature2"></label>
+                        <input type="text" id="feature2" name="feature2" placeholder="Sex (0: female, 1: male)"
+                            required>
+                    </div>
+
+                    <div class="inputs"><label for="feature3"></label>
+                        <input type="text" id="feature3" name="feature3" placeholder="Chest pain type (0-3)" required>
+                    </div>
+
+                    <div class="inputs"><label for="feature4"></label>
+                        <input type="text" id="feature4" name="feature4" placeholder="Resting blood pressure (mmHg)"
+                            required>
+                    </div>
+
+                    <div class="inputs"><label for="feature5"></label>
+                        <input type="text" id="feature5" name="feature5" placeholder="Cholesterol level (mg/dL)"
+                            required>
+                    </div>
+
+                    <div class="inputs"><label for="feature6"></label>
+                        <input type="text" id="feature6" name="feature6"
+                            placeholder="Fasting blood sugar (0: <= 120 mg/dL, 1: > 120 mg/dL)" required>
+                    </div>
+
+                    <div class="inputs"><label for="feature7"></label>
+                        <input type="text" id="feature7" name="feature7" placeholder="Resting ECG result (0-2)"
+                            required>
+                    </div>
+
+                    <div class="inputs"><label for="feature8"></label>
+                        <input type="text" id="feature8" name="feature8" placeholder="Maximum heart rate achieved"
+                            required>
+                    </div>
+
+                    <div class="inputs"><label for="feature9"></label>
+                        <input type="text" id="feature9" name="feature9"
+                            placeholder="Exercise-induced angina (0: no, 1: yes)" required>
+                    </div>
+
+                    <div class="inputs"><label for="feature10"></label>
+                        <input type="text" id="feature10" name="feature10"
+                            placeholder="ST depression induced by exercise relative to rest" required>
+                    </div>
+
+                    <div class="inputs"><label for="feature11"></label>
+                        <input type="text" id="feature11" name="feature11"
+                            placeholder="Slope of the ST segment during peak exercise (0-2)" required>
+                    </div>
+
+                    <div class="inputs"><label for="feature12"></label>
+                        <input type="text" id="feature12" name="feature12" placeholder="Number of major vessels (0-3)"
+                            required>
+                    </div>
+
+                    <div class="inputs"><label for="feature13"></label>
+                        <input type="text" id="feature13" name="feature13" placeholder="Thalassemia result (0-3)"
+                            required>
+                    </div>
+                </div>
+                <div class="predict-button">
+                    <input class="inp-btn" type="submit" value="Predict">
+                </div>
+            </form>
+            {% include 'prediction.html' %}
+        </div>
+    </div>
+
+    {% include 'footer.html' %}
+</body>
+
+</html>

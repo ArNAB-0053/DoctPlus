@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../static/Image/WebLogo.ico" type="image/x-icon">
+    <title>Disease Prediction</title>
+    <link rel="stylesheet" href="../static/css/header.css">
+    <link rel="stylesheet" href="../static/css/disease.css">
+    <link rel="stylesheet" href="../static/css/footer.css">
+    <script src="../static/js/drawer.js"></script>
+    <script src="../static/js/script.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    <script src="../static/js/signUpIn.js"></script>
+    <script src="../static/js/diseaseSidebar.js"></script>
+</head>
+
+<body>
+    {% include 'header.html' %}
+    <div class="container-sidebar-form">
+        {% include 'disease_sidebar.html' %}
+        <div class="container-form">
+            <div class="desContent">
+                <h1>Disease Predictor</h1>
+                <div class="underlineDP"></div>
+                <p>
+                    Disease Predictor is an advanced health analysis tool designed to empower you with valuable insights
+                    into your health. Using cutting-edge algorithms and medical data analysis, our application can
+                    predict
+                    the likelihood of three major diseases: heart disease, diabetes, and Parkinson's disease.
+                </p>
+            </div>
+            <div class="diseaseContainer">
+                <div class="forWrappingContainer">
+                    <h3 class="h3">Why Choose Disease Predictor? </h3>
+                    <div class="forWrapping">
+                        <div>
+                            <h4 class="h4">Proactive Health Management </h4>
+                            <p>By providing essential health information, Disease Predictor enables you to take a
+                                proactive
+                                approach to managing your well-being.</p>
+                        </div>
+
+                        <div>
+                            <h4 class="h4">Early Detection </h4>
+                            <p>Detecting potential health risks early can lead to timely medical interventions,
+                                improving
+                                your chances of better health outcomes.</p>
+                        </div>
+
+
+                        <div>
+                            <h4 class="h4">Personalized Recommendations </h4>
+                            <p>Our predictions are tailored to your unique characteristics and medical history, ensuring
+                                personalized and accurate results.</p>
+                        </div>
+
+
+                        <div>
+                            <h4 class="h4">User-Friendly Interface </h4>
+                            <p>Disease Predictor features an intuitive and user-friendly interface, making it accessible
+                                to
+                                users of all backgrounds.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="description">
+                <div class="diseaseContent" id="YHYD">
+                    <h3 class="h3">Your Health, Your Data </h3>
+                    <p>
+                        At Disease Predictor, we value your privacy and data security. Rest assured that your
+                        medical
+                        information is treated with the utmost confidentiality and stored securely. Our application
+                        adheres
+                        to
+                        strict privacy protocols, and your data will never be shared with third parties without your
+                        consent.
+                    </p>
+                </div>
+
+                <div class="diseaseContent" id="IN">
+                    <h3 class="h3">Important Note </h3>
+                    <p>
+                        Please be aware that Disease Predictor is not a substitute for professional medical advice.
+                        Always
+                        consult your healthcare provider for comprehensive medical assessments and advice. Our
+                        predictions
+                        are
+                        meant to complement medical consultations and serve as a proactive health management tool.
+                    </p>
+                </div>
+            </div>
+            <div class="descriptionLinks">
+                <div class="diseaseContentLinks">
+                    <div class="h3-p">
+                        <h3 class="h3">Start Predicting Your Health </h3>
+                        <p>
+                            Take the first step towards a healthier future by exploring our prediction services for
+                            heart disease, diabetes, and Parkinson's disease.
+                            Click on the links below to get started:
+                        </p>
+                    </div>
+                    <div class="div-res-links">
+                        <div>
+                            <a class="a-links" href="/heart_form">Heart Disease Prediction</a>
+                        </div>
+                        <div>
+                            <a class="a-links" href="/diabetes_form">Diabetes Prediction</a>
+                        </div>
+                        <div>
+                            <a class="a-links" href="/parkinsons_form">Parkinson's Disease Prediction</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <p>
+                Let Disease Predictor help you make informed decisions about your health and well-being.
+                Together, we can work towards a healthier and happier you.
+            </p> -->
+        </div>
+    </div>
+    {% include 'footer.html' %}
+</body>
+
+</html>

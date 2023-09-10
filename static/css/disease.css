@@ -1,0 +1,770 @@
+@import url('https://fonts.googleapis.com/css2?family=Goldman&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Eagle+Lake&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-sidebar-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+input {
+    height: 6vh;
+    max-height: 10vh;
+    margin-top: 1rem;
+    text-align: center;
+    border-radius: 1rem;
+    box-shadow: #7e22ceba .3rem .3rem .6rem 0rem inset, hsla(272, 72%, 47%, 0.11) -.3rem -.3rem .6rem .1rem inset;
+    border: none;
+    margin-right: 1.5rem;
+    margin-left: 1.5rem;
+    padding-left: 7rem;
+    padding-right: 7rem;
+    background-color: #f0e0ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1 1 35vh;
+}
+
+input::placeholder {
+    color: #7d50a4;
+    font-family: 'Merriweather', serif;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 1.3rem;
+}
+
+input:focus {
+    outline: none;
+    border: 0.2rem solid #7E22CE;
+    box-shadow: none;
+    background: #f0e0ff;
+}
+
+form {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    flex-direction: column;
+}
+
+p {
+    font-size: 1.7rem;
+    text-align: center;
+    font-family: 'Merriweather', serif;
+    color: #511982;
+}
+
+.container-form {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 2.5rem;
+    padding: 3rem 5rem;
+}
+
+.container-form h1{
+    font-size: 2.2rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 0.5rem;
+    color: #7E22CE;
+}
+
+.UnderlineDH {
+    height: 0.4rem;
+    width: 23rem;
+    background: #7E22CE;
+    margin-bottom: 2rem;
+    border-radius: 4rem;
+}
+
+.inputs-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    /* border: 2px solid black; */
+    padding: 5rem 1rem 6rem 1rem;
+    border-radius: 2.5rem;
+    box-shadow: #7e22ce47 0px 4px 16px, #7e22ce2b 0px 8px 32px;
+    background-color: #e5c8ff47;
+}
+
+.predict-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.inp-btn {
+    font-weight: bolder;
+    text-decoration: none;
+    margin-top: 5rem;
+    border: 0.3rem solid #551191;
+    border-radius: 7rem;
+    background: #7E22CE;
+    color: #FFFFFF;
+    box-shadow: rgba(0, 0, 0, 0.15) 0rem .2rem .8rem;
+    width: 20vh;
+    cursor: pointer;
+    font-size: 1.5rem;
+    font-family: 'Goldman', cursive;
+    text-transform: uppercase;
+    transition: font-size 0.1s ease, border 0.3s ease;
+}
+
+.inp-btn:hover {
+    font-size: 1.7rem;
+    border: none;
+}
+
+.dc-links-h,
+.dc-links-d,
+.dc-links-p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    margin: 1.5rem 0;
+    border-radius: 3.0rem;
+    box-shadow: rgba(50, 50, 93, 0.25) 0rem .2rem .5rem -.1rem, rgba(0, 0, 0, 0.3) 0rem .1rem .3rem -.1rem;
+    width: 30vh;
+    height: 8vh;
+    padding: .3rem .6rem;
+    background-color: #c889ff;
+}
+
+.dc-links-h a,
+.dc-links-d a,
+.dc-links-p a {
+    color: #44037c;
+    font-size: 1.7rem;
+}
+
+.prediction {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.prediction-text {
+    display: flex;
+    color: #44037c;
+    border: .2rem solid black;
+    padding: 4.0rem;
+    border-radius: 1.5rem;
+    background: rgb(255, 94, 94);
+    color: #FFFFFF;
+}
+
+
+.disease-drawer-toggle {
+    position: absolute;
+    top: 9rem;
+    left: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: box-shadow 0.5s ease;
+    padding: 1.1rem;
+    border-radius: 1rem;
+}
+
+.disease-drawer-toggle:hover {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.svg-menubar,
+.go-back {
+    position: relative;
+    height: 2rem;
+    width: 2rem;
+    margin-left: 0.4rem;
+}
+
+.go-back {
+    display: none;
+}
+
+.disease-drawer {
+    position: fixed;
+    top: 0;
+    left: -43rem;
+    width: 34rem;
+    min-height: 100%;
+    max-height: 200%;
+    background-color: #c17bfe;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+    padding: 0;
+}
+
+.close-icon {
+    position: fixed;
+    top: 0.01rem;
+    left: -43rem;
+    width: 3.5rem;
+    height: 3.5rem;
+    background-color: #c17bfe;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+    cursor: pointer;
+    border-end-end-radius: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.open .close-icon {
+    left: 34rem;
+}
+
+.footer-container.open {
+    width: calc(100vw - 34rem);
+    left: 34rem;
+}
+
+.container-sidebar-form {
+    display: flex;
+}
+
+.disease-sidebar {
+    transition: width 0.3s ease;
+}
+
+.disease-sidebar.open {
+    width: 8rem;
+}
+
+.container-form {
+    flex-grow: 1;
+    transition: margin-left 0.3s ease;
+    margin-left: 8rem;
+    margin-right: 3rem;
+}
+
+.container-form.open {
+    margin-left: 32rem;
+}
+
+.disease-drawer.open {
+    left: 0;
+}
+
+.links-of-prediction-for-sidebar {
+    background-color: #d4a2ff;
+    margin: 0;
+    padding: 4rem 0 4rem 0;
+    width: 32rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    border-radius: 15px;
+}
+
+.res-links {
+    display: none;
+}
+
+.description {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.h3 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+    color: #44067b;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.h4 {
+    margin-top: 0.5rem;
+    margin-bottom: 0.1rem;
+    font-size: 2rem;
+    color: #511982;
+    font-family: 'Merriweather', serif;
+    font-weight: 600;
+    text-align: center;
+}
+
+.div-res-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;
+    width: 100%;
+}
+
+.a-links {
+    /* box-shadow: #8720e11b 0px 0px 0px 3px; */
+    box-shadow: #600baa 0px 3px 8px;
+    padding: 0.1rem 1.2rem;
+    margin-top: 0.7rem;
+    border-radius: 5rem;
+    width: 48rem;
+    height: 4.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.7rem;
+    font-family: 'Merriweather', serif;
+    margin-bottom: 1rem;
+    color: #600baa;
+    /* text-transform: uppercase; */
+}
+
+.a-links:hover {
+    background-color: #600baa;
+    color: #efd2ff;
+    opacity: 0.7;
+}
+
+.desContent {
+    background-image: url(/static/Image/diseaseBack.png);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 3rem;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    border-bottom-right-radius: 7rem;
+    border-bottom-left-radius: 7rem;
+}
+
+.desContent p {
+    width: 50%;
+    text-align: center;
+    font-size: 2rem;
+    color: #ffcece;
+    margin-left: 10%;
+    margin-bottom: 3%;
+    font-size: 1.7rem;
+    font-family: 'Merriweather', serif;
+}
+
+.desContent h1 {
+    margin-bottom: 3%;
+    margin-top: 3%;
+    color: #ffe9e9;
+    font-size: 3.5rem;
+    font-family: 'Eagle Lake', cursive;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-left: 19%;
+}
+
+.diseaseContent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: rgba(193, 5, 255, 0.311) 0px 10px 36px 0px, rgba(192, 4, 255, 0.201) 0px 0px 0px 1px;
+    border-radius: 2rem;
+    margin: 2rem 1rem;
+    padding: 0 3rem 2rem 3rem;
+    height: 30vh;
+    width: auto;
+    flex: 1 1 30vw;
+}
+
+.diseaseContent p {
+    text-align: justify;
+}
+
+.diseaseContainer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.forWrappingContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 2rem;
+    margin: 2rem 0;
+    padding: 2rem;
+}
+
+.forWrapping {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.forWrapping div {
+    height: 32vh;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+    border-radius: 2rem;
+    background-color: #e8d0ff;
+    border-top-left-radius: 6rem;
+    border-bottom-right-radius: 6rem;
+    padding: 2rem 3rem;
+    margin: 2rem;
+    flex: 1 1 25vh;
+}
+
+.forWrapping div p {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 4%;
+}
+
+.descriptionLinks {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    border-radius: 2rem;
+    margin-top: 2rem;
+}
+
+.diseaseContentLinks {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 60%;
+    padding-bottom: 2rem;
+}
+
+.h3-p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.h3-p p {
+    text-align: justify;
+}
+
+.forWrappingContainer,
+.diseaseContent,
+.descriptionLinks {
+    background-color: #d9affb;
+}
+
+@media screen and (max-width: 768px) {
+    html {
+        font-size: 45%;
+    }
+
+    body {
+        width: 100%;
+        padding: 0;
+        background-color: #f3edf8;
+    }
+
+    .underlineDP {
+        width: 50vw;
+        height: 0.42rem;
+        background: #ffe9e9;
+        margin-top: -2.5vh;
+        margin-bottom: 2vh;
+        border-radius: 25px;
+    }
+
+    .links-of-prediction-for-res {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .svg-menubar {
+        height: 0;
+        width: 0;
+        display: none;
+    }
+
+    .res-links {
+        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+        width: 100%;
+        height: 100%;
+        padding: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 2rem;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .res-links a {
+        font-size: 2.5rem;
+    }
+
+    .container-form {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        flex-direction: column;
+        box-shadow: none;
+        height: 100%;
+        background-color: #f2e3ff00;
+        margin: 0;
+    }
+
+    .container-form h1 {
+        margin-top: 4rem;
+        font-size: 4rem;
+    }
+
+    .a-links {
+        width: 70vw;
+        height: 6vh;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .div-res-links {
+        width: 100%;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .description {
+        padding: 1rem;
+    }
+
+    .inputs-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        padding: 1.3rem 1rem 1.3rem 1rem;
+    }
+
+    .inputs {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 85vw;
+    }
+
+    input {
+        height: 6vh;
+        width: 100%;
+        max-width: 100%;
+        max-height: 100%;
+        text-align: left;
+        margin: 1rem 0;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        background-color: #f1eef4;
+        border-radius: 2rem;
+    }
+
+    input::placeholder {
+        font-size: 1.8rem;
+    }
+
+    .inp-btn {
+        text-align: center;
+    }
+
+    .go-back {
+        position: absolute;
+        left: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid #7E22CE;
+        padding: 0.8rem 1.2rem;
+        color: #7E22CE;
+        border-radius: 0.5rem;
+    }
+
+    .container-form p,
+    .a-links {
+        font-size: 2rem;
+    }
+
+    .h3 {
+        font-size: 2.9rem;
+    }
+
+    .h4 {
+        font-size: 2.4rem;
+    }
+
+    .disease-drawer-toggle {
+        height: 0;
+        width: 0;
+        display: none;
+    }
+
+    .diseaseContent {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .diseaseContainer {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .desContent {
+        background-image: none;
+        background-color: #FF6565;
+        background-size: cover;
+        background-position: right;
+        width: 100%;
+        height: 100%;
+        border-radius: 3rem;
+        padding: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin: 0;
+        text-align: center;
+    }
+
+    .desContent p {
+        width: 100%;
+        text-align: center;
+        font-size: 2.5rem;
+        color: #ffe9e9;
+        margin-left: 0;
+        padding: 0 6rem;
+    }
+
+    .desContent h1 {
+        margin-bottom: 3rem;
+        margin-top: 3%;
+        font-size: 3.5rem;
+        width: 100%;
+        margin-left: 0;
+        padding: 0 3rem;
+    }
+
+    .forWrappingContainer {
+        width: 100%;
+    }
+
+    .forWrapping {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .forWrapping div {
+        height: 100%;
+        padding: 3rem 4rem;
+    }
+
+    .forWrapping div p {
+        font-size: 2rem;
+    }
+
+    .description {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        width: 100%;
+    }
+
+    .diseaseContent {
+        height: 100%;
+        width: 95%;
+        margin: 0;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    }
+
+    #YHYD {
+        margin-bottom: 2rem;
+    }
+
+    #IN {
+        margin-top: 1rem;
+    }
+
+    .descriptionLinks {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 108%;
+        border-radius: 2rem;
+        margin-top: 2rem;
+    }
+
+    .diseaseContentLinks {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 100%;
+        padding: 2rem 3rem;
+    }
+}

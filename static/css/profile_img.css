@@ -1,0 +1,498 @@
+@import url('https://fonts.googleapis.com/css2?family=Goldman&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+.profile-image-container {
+  height: 14rem;
+  width: 12rem;
+  padding: 0;
+  margin: 0;
+  border-radius: 1.2rem;
+  border: 0.35rem solid #ffffff;
+}
+
+.image-container {
+  height: 14rem;
+  width: 12rem;
+  overflow: hidden;
+}
+
+.uploaded-image {
+  object-fit: cover;
+  height: 14rem;
+  width: 12rem;
+  border-radius: 1rem;
+}
+
+.imgbtn {
+  display: flex;
+  height: 14rem;
+  width: 12rem;
+  cursor: pointer;
+  transition: opacity 0.3s ease-in;
+}
+
+.imgbtn:hover {
+  opacity: 0.7;
+}
+
+.main-profile-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-page-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-page-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  /* box-shadow: rgba(172, 172, 172, 0.16) 0px 1px 4px, rgb(166, 166, 166) 0px 0px 0px 3px; */
+  padding: 2rem;
+  border-radius: 2rem;
+  width: 100%;
+  max-width: 25rem;
+  height: 100%;
+  background-color: #6890b96d;
+}
+
+.profileBtn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.secondary-profile-displaying-container {
+  font-size: 2.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: 1rem;
+  padding-left: 4rem;
+  padding-right: 4rem;
+  background-color: #c7d1db98;
+  border-radius: 2rem;
+  padding-top: 4rem;
+  width: 100%;
+}
+
+.secondary-profile-displaying-container h1 {
+  font-size: 3.5rem;
+  margin-left: 1rem;
+  color: #095162;
+  font-family: 'Merriweather', serif;
+}
+
+/* .secondary-profile-displaying-container p {
+  border: 0.2rem solid #095162;
+  width: 30rem;
+} */
+
+#addressShowProfile {
+  margin-bottom: 2.5rem;
+}
+
+.profile-page-container {
+  font-size: 2.5rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.profileInputs {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: row;
+  width: 25rem;
+  height: 100%;
+  margin-bottom: 0;
+}
+
+.labels-spans {
+  color: #072e55;
+  font-weight: bolder;
+  font-family: 'Merriweather', serif;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-top: 2rem;
+  flex-direction: column;
+  width: 100%;
+}
+
+.div-label-span-content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-top: 1rem;
+  flex-direction: row;
+  width: 100%;
+}
+
+#name {
+  color: #095162;
+  font-size: 2.5rem;
+  font-weight: 800;
+  font-family: 'Merriweather', serif;
+}
+
+.div-pd-field {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0.5rem 1rem;
+}
+
+.personalDetails label {
+  font-size: 2rem;
+  color: #072e55;
+  font-weight: 900;
+  /* font-family: 'Roboto', sans-serif; */
+  font-family: 'PT Sans', sans-serif;
+  font-style: normal;
+}
+
+.personalDetails span {
+  font-size: 1.8rem;
+  color: #095162;
+  font-family: 'Montserrat', sans-serif;
+  font-style: italic;
+}
+
+.personalDetails {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 1.8rem;
+  margin-bottom: 1.8rem;
+}
+
+#profileEmailSpan {
+  word-break: break-all;
+  word-wrap: break-word;
+}
+
+.divEdit svg {
+  height: 1.5rem;
+  width: 1.5rem;
+  margin: 0;
+  padding: 0;
+  color: #f4fcff;
+}
+
+.signoutButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  border: none;
+  background: none;
+  font-family: 'Goldman', cursive;
+  font-weight: 900;
+  color: #f8fbfe;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+.class-signout svg {
+  display: flex;
+  cursor: pointer;
+  color: #f8fbfe;
+}
+
+.class-signout {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border-radius: 5rem;
+  background: #4682B4;
+  width: 15rem;
+  height: 4rem;
+  cursor: pointer;
+}
+
+.divEdit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 15rem;
+  height: 4rem;
+  border-radius: 5rem;
+  background: #177694;
+  margin-top: 1.5rem;
+  cursor: pointer;
+}
+
+.divEdit:hover,
+.class-signout:hover {
+  opacity: 0.7;
+}
+
+.completeProfile {
+  font-family: 'Goldman', cursive;
+  font-weight: 900;
+  font-size: 1.5rem;
+  color: #f4fcff;
+}
+
+.personalDetails span {
+  width: 20rem;
+  height: 100%;
+  box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  border-radius: 0.7rem;
+  margin-top: 1rem;
+  text-align: center;
+  border: 2px solid #072e55;
+}
+
+.name-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (max-width: 1024px) {
+  .main-profile-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+  }
+
+  .profile-page-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+    padding: 1rem;
+  }
+
+  .profile-page-head {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    margin: 1rem;
+    padding: 1rem;
+  }
+
+  .profile-page-container {
+    margin: 0;
+  }
+
+  .secondary-profile-displaying-container {
+    font-size: 2.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 1rem;
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+  }
+
+  .secondary-profile-displaying-container h1 {
+    margin: 0;
+  }
+
+  .personalDetails {
+    height: 100%;
+    width: 90%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .div-pd-field {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .profileBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+  }
+
+  .personalDetails span {
+    width: 90%;
+    height: 100%;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .divEdit,
+  .class-signout {
+    width: 60%;
+    height: 5rem;
+  }
+
+  #name {
+    font-size: 4rem;
+    text-align: center;
+  }
+
+  .labels-spans {
+    margin-left: 0;
+  }
+
+  .labels-spans {
+    font-size: 3rem;
+  }
+
+  .profileInputs {
+    width: 60vw;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .main-profile-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+  }
+
+  .profile-page-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+    padding: 1rem;
+  }
+
+  .profile-page-head {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    margin: 1rem;
+    padding: 1rem;
+  }
+
+  .profile-page-container {
+    margin: 0;
+  }
+
+  .secondary-profile-displaying-container {
+    font-size: 2.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 1rem;
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+  }
+
+  .secondary-profile-displaying-container h1 {
+    margin: 0;
+  }
+
+  .personalDetails {
+    height: 100%;
+    width: 90%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .div-pd-field {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .profileBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+  }
+
+  .personalDetails span {
+    width: 90%;
+    height: 100%;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .divEdit,
+  .class-signout {
+    width: 60%;
+    height: 5rem;
+  }
+
+  #name {
+    font-size: 4rem;
+    text-align: center;
+  }
+
+  .labels-spans {
+    margin-left: 0;
+  }
+
+  .labels-spans {
+    font-size: 3rem;
+  }
+
+  .profileInputs {
+    width: 60vw;
+  }
+}
+
+@media screen and (max-width: 280px) {
+  #name {
+    font-size: 3rem;
+    text-align: center;
+  }
+}

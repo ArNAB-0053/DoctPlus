@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../static/Image/WebLogo.ico" type="image/x-icon">
+    <title>Parkinson's Disease Predicter</title>
+    <link rel="stylesheet" href="../static/css/header.css">
+    <link rel="stylesheet" href="../static/css/disease.css">
+    <link rel="stylesheet" href="../static/css/footer.css">
+    <script src="../static/js/drawer.js"></script>
+    <script src="../static/js/script.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    <script src="../static/js/signUpIn.js"></script>
+    <script src="../static/js/diseaseSidebar.js"></script>
+    <style>
+        .dc-links-p {
+            border: 3px solid #5a0c9e;
+        }
+
+        .dc-links-p a {
+            font-size: 18px;
+            font-weight: 800;
+        }
+    </style>
+</head>
+
+<body>
+    {% include 'header.html' %}
+    <div class="container-sidebar-form">
+        {% include 'disease_sidebar.html' %}
+        <div class="container-form">
+            <a href="/disease">
+                <svg class="go-back" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-arrow-left" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z" />
+                </svg>
+            </a>
+            <h1>Parkinson's Disease Predicter</h1>
+            <div class="UnderlineDH"></div>
+            <form action="/parkinsons" method="post">
+                <div class="inputs-container">
+                    <div class="inputs"><label for="feature1"></label>
+                        <input type="text" id="feature1" name="feature1" placeholder="MDVP:Fo(Hz)" required>
+                    </div>
+
+                    <div class="inputs"><label for="feature2"></label>
+                        <input type="text" id="feature2" name="feature2" placeholder="MDVP:Fhi(Hz)" required>
+                    </div>
+
+                    <div class="inputs"><label for="feature3"></label>
+                        <input type="text" id="feature3" name="feature3" placeholder="MDVP:Flo(Hz)" required>
+                    </div>
+
+                    <div class="inputs"><label for="feature4"></label>
+                        <input type="text" id="feature4" name="feature4" placeholder="MDVP:Jitter(%)" required>
+                    </div>
+
+                    <div class="inputs"><label for="feature5"></label>
+                        <input type="text" id="feature5" name="feature5" placeholder="MDVP:Jitter(Abs)" required>
+                    </div>
+
+                    <div class="inputs"><label for="feature6"></label>
+                        <input type="text" id="feature6" name="feature6" placeholder="MDVP:RAP" required>
+                    </div>
+
+                    <div class="inputs"><label for="feature7"></label>
+                        <input type="text" id="feature7" name="feature7" placeholder="MDVP:PPQ" required>
+                    </div>
+
+                    <div class="inputs"><label for="feature8"></label>
+                        <input type="text" id="feature8" name="feature8" placeholder="Jitter:DDP" required>
+                    </div>
+
+                    <div class="inputs"><label for="feature9"></label>
+                        <input type="text" id="feature9" name="feature9" placeholder="MDVP:Shimmer" required>
+                    </div>
+
+                    <div class="inputs"> <label for="feature10"></label>
+                        <input type="text" id="feature10" name="feature10" placeholder="MDVP:Shimmer(dB)" required>
+                    </div>
+
+                    <div class="inputs"><label for="feature11"></label>
+                        <input type="text" id="feature11" name="feature11" placeholder="Shimmer:APQ3" required>
+                    </div>
+
+                    <div class="inputs"><label for="feature12"></label>
+                        <input type="text" id="feature12" name="feature12" placeholder="Shimmer:APQ5" required>
+                    </div>
+
+                    <div class="inputs"><label for="feature13"></label>
+                        <input type="text" id="feature13" name="feature13" placeholder="MDVP:APQ" required>
+                    </div>
+
+                    <div class="inputs"><label for="feature14"></label>
+                        <input type="text" id="feature14" name="feature14" placeholder="Shimmer:DDA" required>
+                    </div>
+
+                    <div class="inputs"><label for="feature15"></label>
+                        <input type="text" id="feature15" name="feature15" placeholder="NHR" required>
+                    </div>
+
+                    <div class="inputs"><label for="feature16"></label>
+                        <input type="text" id="feature16" name="feature16" placeholder="HNR" required>
+                    </div>
+
+                    <div class="inputs"><label for="feature17"></label>
+                        <input type="text" id="feature17" name="feature17" placeholder="RPDE" required>
+                    </div>
+
+                    <div class="inputs"><label for="feature18"></label>
+                        <input type="text" id="feature18" name="feature18" placeholder="DFA" required>
+                    </div>
+
+                    <div class="inputs"><label for="feature19"></label>
+                        <input type="text" id="feature19" name="feature19" placeholder="spread1" required>
+                    </div>
+
+                    <div class="inputs"><label for="feature20"></label>
+                        <input type="text" id="feature20" name="feature20" placeholder="spread2" required>
+                    </div>
+
+                    <div class="inputs"><label for="feature21"></label>
+                        <input type="text" id="feature21" name="feature21" placeholder="D2" required>
+                    </div>
+
+                    <div class="inputs"><label for="feature22"></label>
+                        <input type="text" id="feature22" name="feature22" placeholder="PPE" required>
+                    </div>
+                </div>
+
+                <div class="predict-button">
+                    <input class="inp-btn" type="submit" value="Predict">
+                </div>
+            </form>
+            {% include 'prediction.html' %}
+        </div>
+    </div>
+    {% include 'footer.html' %}
+</body>
+
+</html>

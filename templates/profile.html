@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="../static/Image/WebLogo.ico" type="image/x-icon">
+  <title>Profile</title>
+  <link rel="stylesheet" href="../static/css/header.css">
+  <link rel="stylesheet" href="../static/css/profile.css">
+  <link rel="stylesheet" href="../static/css/profile_img.css">
+  <link rel="stylesheet" href="../static/css/footer.css">
+  <link rel="stylesheet" href="../static/css/showAlert.css">
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+  <script src="../static/js/scriptForProfile.js"></script>
+  <script src="../static/js/drawer.js"></script>
+  <script src="../static/js/signUpIn.js"></script>
+  <script src="../static/js/diseaseSidebar.js"></script>
+  <script src="../static/js/showAlert.js"></script>
+</head>
+
+<body>
+  {% include 'header.html' %}
+  <main>
+    <div class="profile-page-container-header">
+      {% include 'profile_img.html' %}
+    </div>
+    {% include 'showAlert.html' %}
+  </main>
+  {% include 'footer.html' %}
+</body>
+
+</html>

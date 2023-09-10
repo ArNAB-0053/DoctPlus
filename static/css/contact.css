@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Eagle+Lake&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    overflow-x: hidden;
+    height: 100%;
+}
+
+main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.nav-contact {
+    color: #6808bd;
+}
+
+.nav-contact::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 0.3rem;
+    background-color: #6808bd;
+    margin-top: 2rem;
+}
+
+.contactContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-image: url(/static/Image/profileBack4.png);
+    background-size: cover;
+    background-position: center;
+    width: 70vw;
+    height: 50vh;
+    border-radius: 2rem;
+    /* border-bottom-right-radius: 20rem; */
+    padding-top: 20%;
+    margin-top: 2rem;
+}
+
+.headingContact {
+    font-size: 3rem;
+    text-align: center;
+    font-family: 'Eagle Lake', cursive;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.contactContent {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.contactContent a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 4.5rem;
+    height: 4rem;
+}
+
+.contactContent a svg {
+    width: 2.5rem;
+    height: 2.5rem;
+    color: #e0e8f4;
+}
+
+@media screen and (max-width: 768px) {
+    html {
+        font-size: 45%;
+    }
+    
+    .contactContainer {
+        width: 90vw;
+        height: 100%;
+        padding-top: 25%;
+        padding-bottom: 5%;
+        margin-top: 5%;
+    }
+
+    .headingContact {
+        font-size: 3rem;
+        text-align: center;
+        font-family: 'Eagle Lake', cursive;
+        text-transform: uppercase;
+        color: #fff;
+        margin-top: 30%;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        word-wrap: break-word;
+    }
+
+    .footer-container {
+        bottom: 0;
+    }
+
+    .contactContent {
+        width: 90%;
+    }
+
+    .contactContent a {
+        width: 4.5rem;
+        height: 4rem;
+        margin-bottom: 20%;
+    }
+}
+
+@media (max-height: 200mm) {
+    .footer-container {
+        bottom: unset;
+    }
+}

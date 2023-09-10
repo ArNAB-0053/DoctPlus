@@ -1,0 +1,357 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Eagle+Lake&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    overflow-x: hidden;
+    height: 100%;
+}
+
+main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.nav-about {
+    color: #6808bd;
+}
+
+.nav-about::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 0.3rem;
+    background-color: #6808bd;
+    margin-top: 2rem;
+}
+
+.aboutHeading {
+    font-size: 4rem;
+    text-align: center;
+    font-family: 'Eagle Lake', cursive;
+    text-transform: uppercase;
+    color: #fff;
+    margin-left: 16%;
+}
+
+.aboutUsUnderLine {
+    width: 20rem;
+    height: 0.2rem;
+    background: #ffffff;
+    margin-left: 17%;
+}
+
+.aboutContainer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.aboutDes {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
+    padding: 2rem 1rem 1rem 7%;
+    margin: 1.2rem;
+    /* background-color: #027b93; */
+    background-image: url(/static/Image/aboutUs.png);
+    background-size: cover;
+    background-position: center;
+    border-radius: 2rem;
+    border-bottom-right-radius: 40%;
+}
+
+.aboutContent {
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 5rem 0;
+}
+
+.p1 {
+    font-size: 3rem;
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+    color: #ecfcff;
+}
+
+.img-link {
+    height: 8rem;
+    width: 8rem;
+    border-radius: 50%;
+}
+
+.descriptionContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    /* background: #000; */
+}
+
+.about-us-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.team-member {
+    width: 22rem;
+    height: 22rem;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 1.3rem;
+    border-end-end-radius: 20%;
+    border-top-left-radius: 20%;
+    box-shadow: rgba(17, 17, 26, 0.05) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+}
+
+.social-media {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-media a {
+    margin: 0.6rem;
+    padding: 0;
+}
+
+/* arnab */
+#arnab {
+    background-color: #f3c9d8;
+}
+
+#arnab h3 {
+    color: #c2014b;
+}
+
+#arnab .role {
+    color: #760933;
+}
+
+#arnab .details {
+    color: #270311;
+}
+
+.mediaLinkSVGArnab {
+    margin: 0;
+    color: #c2014b;
+}
+
+
+/* rahul */
+#rahul {
+    background-color: #cac9f3;
+}
+
+#rahul h3 {
+    color: #0171c2;
+}
+
+#rahul .role {
+    color: #095076;
+}
+
+#rahul .details {
+    color: #032227;
+}
+
+.mediaLinkSVGRahul {
+    margin: 0;
+    color: #0171c2;
+}
+
+
+/* dwaipayan */
+#dwaipayan {
+    background-color: #e0c9f3;
+}
+
+#dwaipayan h3 {
+    color: #7501c2;
+}
+
+#dwaipayan .role {
+    color: #490976;
+}
+
+#dwaipayan .details {
+    color: #270320;
+}
+
+.mediaLinkSVGDwaipayan {
+    margin: 0;
+    color: #7501c2;
+}
+
+
+/* shahid */
+#shahid {
+    background-color: #c9f3ea;
+}
+
+#shahid h3 {
+    color: #027b93;
+}
+
+#shahid .role {
+    color: #025474;
+}
+
+#shahid .details {
+    color: #031127;
+}
+
+.mediaLinkSVGShahid {
+    margin: 0;
+    color: #027b93;
+}
+
+
+/* sriparna */
+#sriparna {
+    background-color: #f3e6c9;
+}
+
+#sriparna h3 {
+    color: #c2a201;
+}
+
+#sriparna .role {
+    color: #767109;
+}
+
+#sriparna .details {
+    color: #615600;
+}
+
+.mediaLinkSVGSriparna {
+    margin: 0;
+    color: #c2a201;
+}
+
+.team-member h3 {
+    font-size: 1.5rem;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-bottom: 0.2rem;
+}
+
+.role {
+    font-size: 1.3rem;
+    margin-top: 0.1rem;
+    margin-bottom: 0.1rem;
+    font-family: 'Merriweather', serif;
+    font-weight: 600;
+    text-align: center;
+}
+
+.details {
+    font-size: 1.2rem;
+    text-align: center;
+    margin-top: 1rem;
+    font-family: 'Noto Serif', serif;
+    font-style: italic;
+}
+
+@media screen and (max-width: 855px) {
+    html {
+        font-size: 55%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    html {
+        font-size: 45%;
+    }
+
+    .aboutContent {
+        width: 80%;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 5rem 0;
+    }
+
+    .img-link {
+        height: 10rem;
+        width: 10rem;
+        border-radius: 50%;
+    }
+
+    .team-member {
+        width: 80%;
+        height: 30rem;
+        border-end-end-radius: 18%;
+        border-top-left-radius: 18%;
+    }
+
+    .team-member h3 {
+        font-size: 2.5rem;
+    }
+    
+    .role {
+        font-size: 2.3rem;
+    }
+    
+    .details {
+        font-size: 2rem;
+    }
+
+    .social-media a {
+        margin: 1rem 20%;
+    }
+
+    .aboutDes {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 2rem;
+        border-radius: 2.5rem;
+        border-end-end-radius: 2.5rem;
+        background-position: left;
+        background-color: #027b93;
+        background-image: none;
+    }
+
+    .aboutHeading {
+        text-align: center;
+        margin-left: 0;
+    }
+    
+    .aboutUsUnderLine {
+        margin-left: 0;
+    }
+}

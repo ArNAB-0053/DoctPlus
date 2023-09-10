@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../static/Image/WebLogo.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../static/css/patientDetails.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <title>Complete Profile</title>
+</head>
+
+<body>
+    <main>
+        <div class="PatientDetailsContainer">
+            <h2>Answer the following question to complete your profile</h2><br>
+            <form id="PatientDetails">
+                <!-- Name Question -->
+                <div class="question" id="nameQuestion">
+                    <div class="lineContainer">
+                        <div class="linkContent" id="nameLinkContent">
+                            <div class="num">1</div>
+                        </div>
+                    </div>
+                    <div class="quesContainer">
+                        <h2>Name</h2>
+                        <p>Please provide your full name for your profile. This will help us personalize your experience
+                            and provide you with relevant information.</p>
+                        <div class="gap">Enter your name</div>
+                        <input type="text" placeholder="First Name" id="Fname">
+                        <input type="text" placeholder="Middle Name(if none write '-')" id="Mname">
+                        <input type="text" placeholder="Last Name" id="Lname">
+                    </div>
+                    <div class="button-nxt-pre">
+                        <button class="pre-btn" type="button" style="background: #c5587e;"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-caret-left" viewBox="0 0 16 16">
+                                <path
+                                    d="M10 12.796V3.204L4.519 8 10 12.796zm-.659.753-5.48-4.796a1 1 0 0 1 0-1.506l5.48-4.796A1 1 0 0 1 11 3.204v9.592a1 1 0 0 1-1.659.753z" />
+                            </svg>Previous</button>
+                        <button class="next-btn" type="button" onclick="showAgeQuestion()">Next<svg
+                                xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-caret-right" viewBox="0 0 16 16">
+                                <path
+                                    d="M6 12.796V3.204L11.481 8 6 12.796zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z" />
+                            </svg></button>
+                    </div>
+                </div>
+
+                <!-- Age question -->
+                <div class="question" id="ageQuestion" style="display: none;">
+                    <div class="lineContainer">
+                        <div class="linkContent" id="ageLinkContent">
+                            <div class="num">2</div>
+                        </div>
+                    </div>
+                    <div class="quesContainer">
+                        <h2>Age</h2>
+                        <p>Please provide your current age for your
+                            profile. This will help us personalize your experience and provide you with relevant
+                            information.</p>
+                        <div class="gap">How old are you?</div>
+                        <input type="text" placeholder="Age" id="age">
+                    </div>
+                    <div class="button-nxt-pre">
+                        <button class="pre-btn" type="button" onclick="showNameQuestion()"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-caret-left" viewBox="0 0 16 16">
+                                <path
+                                    d="M10 12.796V3.204L4.519 8 10 12.796zm-.659.753-5.48-4.796a1 1 0 0 1 0-1.506l5.48-4.796A1 1 0 0 1 11 3.204v9.592a1 1 0 0 1-1.659.753z" />
+                            </svg>Previous</button>
+                        <button class="next-btn" type="button" onclick="showGenderQuestion()">Next<svg
+                                xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-caret-right" viewBox="0 0 16 16">
+                                <path
+                                    d="M6 12.796V3.204L11.481 8 6 12.796zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z" />
+                            </svg></button>
+                    </div>
+                </div>
+
+                <!-- Gender question -->
+                <div class="question" id="genderQuestion" style="display: none;">
+                    <div class="lineContainer">
+                        <div class="linkContent" id="genderLinkContent">
+                            <div class="num">3</div>
+                        </div>
+                    </div>
+                    <div class="quesContainer">
+                        <h2>Gender</h2>
+                        <p>For a more personalized profile, kindly share
+                            your gender information with us.</p>
+                        <div class="gap">Enter your gender</div>
+                        <input type="text" placeholder="Gender" id="gender">
+                    </div>
+                    <div class="button-nxt-pre">
+                        <button class="pre-btn" type="button" onclick="showAgeQuestion()"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-caret-left" viewBox="0 0 16 16">
+                                <path
+                                    d="M10 12.796V3.204L4.519 8 10 12.796zm-.659.753-5.48-4.796a1 1 0 0 1 0-1.506l5.48-4.796A1 1 0 0 1 11 3.204v9.592a1 1 0 0 1-1.659.753z" />
+                            </svg>Previous</button>
+                        <button class="next-btn" type="button" onclick="showHeightQuestion()">Next<svg
+                                xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-caret-right" viewBox="0 0 16 16">
+                                <path
+                                    d="M6 12.796V3.204L11.481 8 6 12.796zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z" />
+                            </svg></button>
+                    </div>
+                </div>
+
+                <!-- Height question -->
+                <div class="question" id="heightQuestion" style="display: none;">
+                    <div class="lineContainer">
+                        <div class="linkContent" id="heightLinkContent">
+                            <div class="num">4</div>
+                        </div>
+                    </div>
+                    <div class="quesContainer">
+                        <h2>Height</h2>
+                        <p>For a more personalized profile, kindly share
+                            your height with us.</p>
+                        <div class="gap">Enter your Height</div>
+                        <input type="text" placeholder="Height(cm)" id="height">
+                    </div>
+                    <div class="button-nxt-pre">
+                        <button class="pre-btn" type="button" onclick="showGenderQuestion()"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-caret-left" viewBox="0 0 16 16">
+                                <path
+                                    d="M10 12.796V3.204L4.519 8 10 12.796zm-.659.753-5.48-4.796a1 1 0 0 1 0-1.506l5.48-4.796A1 1 0 0 1 11 3.204v9.592a1 1 0 0 1-1.659.753z" />
+                            </svg>Previous</button>
+                        <button class="next-btn" type="button" onclick="showDOBQuestion()">Next<svg
+                                xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-caret-right" viewBox="0 0 16 16">
+                                <path
+                                    d="M6 12.796V3.204L11.481 8 6 12.796zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z" />
+                            </svg></button>
+                    </div>
+                </div>
+
+                <!-- DOB question -->
+                <div class="question" id="DOBQuestion" style="display: none;">
+                    <div class="lineContainer">
+                        <div class="linkContent" id="DOBLinkContent">
+                            <div class="num">5</div>
+                        </div>
+                    </div>
+                    <div class="quesContainer">
+                        <h2>Date of Birth</h2>
+                        <p>For a more personalized profile, kindly
+                            share
+                            your date of birth with us.</p>
+                        <div class="gap">Enter your Date of Birth</div>
+                        <input type="text" placeholder="Date of Birth" id="DOB">
+                    </div>
+                    <div class="button-nxt-pre">
+                        <button class="pre-btn" type="button" onclick="showHeightQuestion()"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-caret-left" viewBox="0 0 16 16">
+                                <path
+                                    d="M10 12.796V3.204L4.519 8 10 12.796zm-.659.753-5.48-4.796a1 1 0 0 1 0-1.506l5.48-4.796A1 1 0 0 1 11 3.204v9.592a1 1 0 0 1-1.659.753z" />
+                            </svg>Previous</button>
+                        <button class="next-btn" type="button" onclick="showAddressQuestion()">Next<svg
+                                xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-caret-right" viewBox="0 0 16 16">
+                                <path
+                                    d="M6 12.796V3.204L11.481 8 6 12.796zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z" />
+                            </svg></button>
+                    </div>
+                </div>
+
+                <!-- Address question -->
+                <div class="question" id="addressQuestion" style="display: none;">
+                    <div class="lineContainer">
+                        <div class="linkContent" id="addressLinkContent">
+                            <div class="num">6</div>
+                        </div>
+                    </div>
+                    <div class="quesContainer">
+                        <h2>Address</h2>
+                        <p>Please provide your city, district, postal
+                            code (pin code), and country information to complete your profile.</p>
+                        <div class="address-box" onclick="toggleAddressDetails()">
+                            <div class="address-placeholder">Enter your address</div>
+                            <div class="address-details" id="addressDetails" onclick="stopPropagation(event)">
+                                <input type="text" placeholder="City" id="city">
+                                <input type="text" placeholder="District" id="dist">
+                                <input type="text" placeholder="Pin" id="pin">
+                                <input type="text" placeholder="Country" id="country">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="button-nxt-pre">
+                        <button class="pre-btn" type="button" onclick="showGenderQuestion()"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-caret-left" viewBox="0 0 16 16">
+                                <path
+                                    d="M10 12.796V3.204L4.519 8 10 12.796zm-.659.753-5.48-4.796a1 1 0 0 1 0-1.506l5.48-4.796A1 1 0 0 1 11 3.204v9.592a1 1 0 0 1-1.659.753z" />
+                            </svg>Previous</button>
+                        <button class="next-btn" type="button" onclick="showDiseaseQuestion()">Next
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-caret-right" viewBox="0 0 16 16">
+                                <path
+                                    d="M6 12.796V3.204L11.481 8 6 12.796zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z" />
+                            </svg></button>
+                    </div>
+                </div>
+                <script>
+                    function toggleAddressDetails() {
+                        var addressDetails = document.getElementById("addressDetails");
+                        var addressBox = document.querySelector(".address-box");
+
+                        if (addressDetails.style.display === "flex") {
+                            addressDetails.style.display = "none";
+                            addressBox.classList.remove("open");
+                        } else {
+                            addressDetails.style.display = "flex";
+                            addressBox.classList.add("open");
+                        }
+                    }
+
+                    function stopPropagation(event) {
+                        // Prevent the click event from propagating to parent elements
+                        event.stopPropagation();
+                    }
+
+                </script>
+
+                <!-- Disease question -->
+                <div class="question" id="diseaseQuestion" style="display: none;">
+                    <div class="lineContainer">
+                        <div class="linkContent" id="diseaseLinkContent">
+                            <div class="num">7</div>
+                        </div>
+                    </div>
+                    <div class="quesContainer">
+                        <h2>Disease</h2>
+                        <p>Please let us know if you have any disease.
+                            This will help us provide personalized disease predictions and recommendations based on your
+                            medical history.
+                        </p>
+                        <div class="gap">What disease do you have?</p>
+                        </div>
+                        <input type="text" placeholder="Disease" id="disease">
+                    </div>
+                    <div class="button-nxt-pre">
+                        <button class="pre-btn" type="button" onclick="showAddressQuestion()"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-caret-left" viewBox="0 0 16 16">
+                                <path
+                                    d="M10 12.796V3.204L4.519 8 10 12.796zm-.659.753-5.48-4.796a1 1 0 0 1 0-1.506l5.48-4.796A1 1 0 0 1 11 3.204v9.592a1 1 0 0 1-1.659.753z" />
+                            </svg>Previous</button>
+                        <button id="btn" type="submit" class="button mx-auto">
+                            <p id="btnText">Submit</p>
+                            <div class="check-box">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+                                    <path fill="transparent" d="M14.1 27.2l7.1 7.2 16.7-16.8" />
+                                </svg>
+                            </div>
+                        </button>
+                    </div>
+                    <script type="text/javascript" src="../static/js/submitBtn.js"></script>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    <script src="../static/js/patientDetails.js"></script>
+</body>
+<script src="../static/js/showPatientQuestion.js"></script>
+
+</html>
